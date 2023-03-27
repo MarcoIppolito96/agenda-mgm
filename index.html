@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agenda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Agenda</h1>
+	<div id="login-form">
+        <h2>Iniciar sesión</h2>
+        <form>
+          <label for="username">Usuario:</label>
+          <input type="text" id="username" name="username">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password">
+          <button type="submit">Iniciar sesión</button>
+        </form>
+      </div>
+	<form id="formulario">
+		<label for="titulo">Título:</label>
+		<input type="text" id="titulo" name="titulo" required><br>
+		
+		<label for="descripcion">Descripción:</label>
+		<textarea id="descripcion" name="descripcion"></textarea><br>
+		
+		<label for="fecha">Fecha:</label>
+		<input type="date" id="fecha" name="fecha" required><br>
+		
+		<label for="hora">Hora:</label>
+		<input type="time" id="hora" name="hora" required><br>
+		
+		<label for="alerta">Alerta:</label>
+		<input type="checkbox" id="alerta" name="alerta"><br>
+		
+		<button type="submit">Guardar</button>
+	</form>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Título</th>
+				<th>Descripción</th>
+				<th>Fecha</th>
+				<th>Hora</th>
+				<th>Completada</th>
+				<th>Modificar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>
+		<tbody id="tabla">
+			<!-- Aquí se agregan las filas de la tabla con JavaScript -->
+		</tbody>
+	</table>
+	
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="module" src="http://localhost:3000/actividades.js"></script>
+		<script type="module" src="index.js"></script>
+		<script>
+			// Ejemplo de uso de la función obtenerActividades
+			obtenerActividades(function(actividades) {
+			  console.log(actividades);
+			});
+		  </script>
+
+</body>
+</html>
